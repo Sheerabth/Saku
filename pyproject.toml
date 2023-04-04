@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "saku"
+version = "0.1.0"
+description = ""
+authors = ["Raz Crimson <52282402+RazCrimson@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlmodel = "^0.0.8"
+nltk = "^3.8.1"
+code-tokenize = "^0.2.0"
+python-magic = "^0.4.27"
+pydantic = "^1.10.5"
+python-dotenv = "^1.0.0"
+psycopg2-binary = "^2.9.5"
+fastapi = "^0.94.1"
+uvicorn = "^0.21.0"
+redis = {version = "^4.5.1", extras = ["hiredis"]}
+typer = {extras = ["all"], version = "^0.7.0"}
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+black = "^23.1.0"
+poetry = "^1.4.0"
+pre-commit = "^3.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 120
+target-version = ['py310']
+
+
+[tool.isort]
+py_version = 310
+profile = "black"
+line_length = 120
+skip_gitignore = true
+multi_line_output = 3
+remove_redundant_aliases = true
+include_trailing_comma = true
